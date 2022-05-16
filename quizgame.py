@@ -11,7 +11,7 @@ quizes= {
         'B' : 'Penny e Amy',
         'C' : 'Rachel e Monica',
         },
-        'resposta_certa' : 'A' and 'a',
+        'resposta_certa' : 'A',
     },
     2 : {
         'pergunta' : 'Qual o nome do restaurante/café mais famoso da cidade ?',
@@ -20,7 +20,7 @@ quizes= {
         'B' : "Luke's",
         'C' : "Jonh's",
         },
-        'resposta_certa' : 'B' and 'b',
+        'resposta_certa' : 'B',
     },
     3 : {
         'pergunta' : 'Em que cidade se passa a trama ?',
@@ -29,7 +29,7 @@ quizes= {
         'B' : 'Stars Hollow',
         'C' : 'Hamilton',
         },
-        'resposta_certa' : 'B' and 'b',
+        'resposta_certa' : 'B',
     },
     4 : {
         'pergunta' : 'Quem é o primeiro namorado de Rory ?',
@@ -38,7 +38,7 @@ quizes= {
         'B' : 'Logan',
         'C' : 'Dean',
         },
-        'resposta_certa' : 'C' and 'c',
+        'resposta_certa' : 'C',
     },
     5 : {
         "pergunta" : 'Quem é a sua melhor amiga ?',
@@ -47,7 +47,7 @@ quizes= {
         'B' : 'Sookie',
         'C' : 'Paris',
         },
-        'resposta_certa' : 'A' and 'a',
+        'resposta_certa' : 'A',
     },
     6 : {
         'pergunta' : 'Em que ano Rory nasceu ?',
@@ -56,7 +56,7 @@ quizes= {
         'B' : '1985',
         'C' : '1986',
         },
-        'resposta_certa' : 'A' and 'a',
+        'resposta_certa' : 'A',
     },
     7 : {
         'pergunta' : 'Para qual universidade Rory decide ir ?',
@@ -65,7 +65,7 @@ quizes= {
         'B' : 'Havard',
         'C' : 'Yale',
         },
-        'resposta_certa' : 'C' and 'c',
+        'resposta_certa' : 'C',
     },
     8 : {
         'pergunta' : 'Quantas temporadas tem a série ?',
@@ -74,7 +74,7 @@ quizes= {
         'B' : '7',
         'C' : '5',
         },
-        'resposta_certa' : 'B' and 'b',
+        'resposta_certa' : 'B',
     },
     9 : {
         'pergunta' : 'Qual era o sonho de Lorelai ?',
@@ -83,7 +83,7 @@ quizes= {
         'B' : 'Ter um hotel',
         'C' : 'Ter uma empresa',
         },
-        'resposta_certa' : 'B' and 'b',
+        'resposta_certa' : 'B',
     },
     10 : {
         'pergunta' : 'Qual ator de Gilmore Girls já faleceu ?',
@@ -92,7 +92,7 @@ quizes= {
         'B' : 'Sean Gunn',
         'C' : 'Scott Patterson',
         },
-        'resposta_certa' : 'A' and 'a',
+        'resposta_certa' : 'A',
     },  
     11 : {
         'pergunta' : 'Jess escreveu um livro. Qual o título ?',
@@ -101,7 +101,7 @@ quizes= {
         'B' : 'The Subject',
         'C' : 'The Subsect',
         },
-        'resposta_certa' : 'C' and 'c',
+        'resposta_certa' : 'C',
     },
      12 : {
         'pergunta' : 'Onde o episódio piloto da série foi filmado ?',
@@ -110,7 +110,7 @@ quizes= {
         'B' : 'Toronto, Canadá',
         'C' : 'Burbank, Califórnia',
         },
-        'resposta_certa' : 'A' and 'a',
+        'resposta_certa' : 'A',
     },
      13 : {
         'pergunta' : 'Qual slogan ilustra o pôster da Hep Alien ?',
@@ -119,7 +119,7 @@ quizes= {
         'B' : 'We are out there!',
         'C' : 'Humans are not real!',
          },
-        'resposta_certa' : 'C' and 'c',
+        'resposta_certa' : 'C',
     },
     14 : {
         'pergunta' : 'Rory adorava participar de atividades extracurriculares em Chilton. Ela gostava muito de :',
@@ -128,7 +128,7 @@ quizes= {
         'B' : 'Debates',
         'C' : 'Clubes do Livro',
     },
-        'resposta_certa' : 'B' and 'b',
+        'resposta_certa' : 'B',
     },
     15 : {
         'pergunta' : 'Lorelai teve diversos companheiros na série. Alguns deles são :',
@@ -137,19 +137,18 @@ quizes= {
         'B' : 'Kirk, Luke e Dennis',
         'C' : 'Max, Christopher e Kirk',
       },
-        'resposta_certa': 'A' and 'a',
+        'resposta_certa': 'A',
     },
 }
  
 #Criação de dicionários para serem utilizados posteriormente na manipulação de arquivos 
-dict_jogadores = {}
 dict_pontuacoes = {}
 #Criação de listas para armazenar nomes e pontuações dos jogadores, usarei na formação do ranking
 jogadores = []
 scores = []
  
 def linha():
-    print('---------------------------------------------')
+  print('---------------------------------------------')
  
 #Introdução 
 def intro():
@@ -220,7 +219,7 @@ def quiz():
       print(f'{alternativa}: {respostas[alternativa]}') 
 #Usuário responde e se acertar pontua, se errar não pontua e apresenta lista de nome dos jogadores junto com a maior pontuação
     resposta_usuario = input('\nDigite aqui: ')
-    if resposta_usuario == pergunta['resposta_certa']:
+    if resposta_usuario.upper() == pergunta['resposta_certa']:
         linha()
         print('Muito bem!')
         score +=1

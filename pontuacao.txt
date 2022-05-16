@@ -1,1 +1,1 @@
-{"maria": 4, "Juliana": 1, "Carlos": 4, "Klara": 3, "Vanessa": 3, "vanessa": 4}
+{"maria": 4, "Juliana": 1, "Carlos": 4, "Klara": 3, "Vanessa": 3, "vanessa": 4, "Marcos": 1, "Juju": 2, "Lili": 2, "Camila": 3, "MaryLynn": 3}
