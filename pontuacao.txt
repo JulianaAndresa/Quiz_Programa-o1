@@ -1,0 +1,1 @@
+{"maria": 4, "Juliana": 1, "Carlos": 4, "Klara": 3, "Vanessa": 3, "vanessa": 4}
